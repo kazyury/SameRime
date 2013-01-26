@@ -1,0 +1,24 @@
+=Known Issue
+
+=Fixed Bug
+2003-09-19
+* SessionFormが最上段までスクロールしてしまう。
+  --->自動スクロールするための定数を6536→65536に修正
+
+2003-08-29
+* 最初に受信したメッセージが、受信側で表示されない。
+* 突然SessionFormが落ちて、その後にメッセージを受信するとSystemExitが発生する。
+  --->SessionFormがGCされてしまい、Windowが消えていた様子。
+  とりあえず、GC対象とならないようMainFormにSessionFormへの参照を残す形で対応。
+  あと、GCされていたとしても例外Handlingで対応できるようにしたつもり。
+* RangeError（↑と同様かも）。やはり、突然SessionFormが落ちて、TalkToしようとすると発生。
+  ～ is recycled object
+  又はNameError でundefined method 'top' for #<Arra:～>
+  --->SessionFormがGCされてしまい、Windowが消えていた様子。
+  とりあえず、GC対象とならないようMainFormにSessionFormへの参照を残す形で対応。
+  あと、GCされていたとしても例外Handlingで対応できるようにしたつもり。
+
+2003-08-xx
+* Client側が頓死した場合、サーバー上のSTATUSは"0"で残っていて（実際には死んでいる。）、その相手にメッセージ
+  を送信しようとすると、サーバー側で頓死。forwarder.rb:43 Errno:ECONNREFUSED
+  --->結局、サーバー側でCleaner処理を定期的に入れることで対応済み。

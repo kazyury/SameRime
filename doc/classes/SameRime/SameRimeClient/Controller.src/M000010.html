@@ -1,0 +1,21 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>new (SameRime::SameRimeClient::Controller)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/controller.rb, line 11</span>
+  <span class="kw">def</span> initialize
+    @config=configure <span class="cmt"># 各種定義情報の読み取り</span>
+    @runnable =[]
+    @runnable &lt;&lt; @reporter=SameRime::SameRimeClient::Reporter.new(<span class="kw">self</span>)
+    @runnable &lt;&lt; @listener=SameRime::SameRimeClient::Listener.new(<span class="kw">self</span>)
+    @runnable &lt;&lt; @ui      =SameRime::SameRimeClient::UI.new(<span class="kw">self</span>)
+    @threads=[]       <span class="cmt"># 各Agentを動かすスレッドのコンテナ</span>
+    @sessions=Sessions.instance
+  <span class="kw">end</span></pre>
+</body>
+</html>

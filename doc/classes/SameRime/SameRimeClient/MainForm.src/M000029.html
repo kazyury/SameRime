@@ -1,0 +1,23 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>create_child (SameRime::SameRimeClient::MainForm)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 137</span>
+  <span class="kw">def</span> create_child(target_name,target_address)
+    child=VRLocalScreen.newform(<span class="kw">nil</span>,<span class="kw">nil</span>,SessionForm)
+    child.caption=&quot;#{target_name}‚³‚ñ‚Æ‚ÌƒZƒbƒVƒ‡ƒ“&quot;
+    child.controller=@controller
+    child.parent_form=<span class="kw">self</span>
+    child.target_addr=target_address
+    @controller.add_session(target_address,child.id)
+    child.create.show
+    @children.push child
+    <span class="kw">return</span> child
+  <span class="kw">end</span></pre>
+</body>
+</html>

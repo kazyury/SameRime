@@ -1,0 +1,15 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>remove_session (SameRime::SameRimeClient::Sessions)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/sessions.rb, line 27</span>
+  <span class="kw">def</span> remove_session(arg)
+    @@sessions.delete_if{|ip,ui_id| arg==ip <span class="kw">or</span> arg==ui_id }
+  <span class="kw">end</span></pre>
+</body>
+</html>

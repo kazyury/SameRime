@@ -1,0 +1,16 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>clean_up (SameRime::SameRimeServer::StatusManager)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File server/statusmanager.rb, line 88</span>
+  <span class="kw">def</span> clean_up
+    @status.reject!{|client_ip,value| value[0]!=<span class="str">&quot;0&quot;</span>}
+    @logger.debug {&quot;SameRimeServer::StatusManager#clean_up results #{@status}&quot;}
+  <span class="kw">end</span></pre>
+</body>
+</html>

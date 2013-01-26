@@ -1,0 +1,25 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>new (SameRime::SameRimeServer::StatusManager)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File server/statusmanager.rb, line 20</span>
+  <span class="kw">def</span> initialize(controller)
+    @controller=controller
+    @server=TCPServer.open(@controller.config[:StatusManagerPort])
+    @interval=@controller.config[:Interval]
+    @status={}
+    @logger=Log4r::Logger[<span class="str">'default_logger'</span>]
+    Thread.new{
+      <span class="kw">while</span> <span class="kw">true</span>
+        sleep @interval
+        clean_up
+      <span class="kw">end</span>
+    }
+  <span class="kw">end</span></pre>
+</body>
+</html>

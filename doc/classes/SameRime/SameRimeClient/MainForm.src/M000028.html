@@ -1,0 +1,28 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>message_received (SameRime::SameRimeClient::MainForm)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 119</span>
+  <span class="kw">def</span> message_received(msg)
+    <span class="kw">if</span> form_id=@controller.find_form(msg.sender)
+      <span class="kw">begin</span>
+        session_form=ObjectSpace._id2ref(form_id)
+        session_form.top(<span class="kw">true</span>)  <span class="cmt"># 最前面に表示</span>
+      <span class="kw">rescue</span> RangeError
+        <span class="cmt"># GCされていたら、Sessionsから子画面のIDを削除して</span>
+        <span class="cmt"># 新たなSessionFormを作成する。</span>
+        @controller.remove_session(form_id)
+        session_form=create_child(msg.sender_name,msg.sender)
+      <span class="kw">end</span>
+    <span class="kw">else</span>
+      session_form=create_child(msg.sender_name,msg.sender)
+    <span class="kw">end</span>
+    session_form.add_message(msg)
+  <span class="kw">end</span></pre>
+</body>
+</html>

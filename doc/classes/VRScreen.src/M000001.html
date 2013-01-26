@@ -1,0 +1,36 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>messageloop (VRScreen)</title>
+<link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 13</span>
+  <span class="kw">def</span> messageloop(waitflag=<span class="kw">false</span>)
+    @idleprocs=[] <span class="kw">unless</span> <span class="kw">defined?</span>(@idleprocs)
+    threadlist = Thread.respond_to?(:list)   <span class="cmt"># when does this method appears?</span>
+
+    @application.messageloop <span class="kw">do</span>
+      n=@idleprocs.shift
+      <span class="kw">if</span> n <span class="kw">then</span>
+        Thread.new <span class="kw">do</span>
+          n.call
+        <span class="kw">end</span>
+      <span class="kw">else</span>
+        <span class="kw">if</span> waitflag <span class="kw">then</span>
+          @application.waitmessage
+        <span class="kw">elsif</span> threadlist <span class="kw">and</span> Thread.list.size==1 <span class="kw">then</span>
+          @application.waitmessage
+        <span class="kw">else</span>
+<span class="cmt"># patch for CPU-full under multi-thread env.</span>
+          sleep 0.001
+<span class="cmt"># patch for CPU-full under multi-thread env.</span>
+          Thread.pass
+        <span class="kw">end</span>
+      <span class="kw">end</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

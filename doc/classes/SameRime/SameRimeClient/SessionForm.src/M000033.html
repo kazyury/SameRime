@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>construct (SameRime::SameRimeClient::SessionForm)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 168</span>
+  <span class="kw">def</span> construct
+    <span class="kw">self</span>.move(503,120,255,326)
+    addControl(VRRichedit,<span class="str">'historyRE'</span>,<span class="str">''</span>,8,8,224,176,1342177284)
+    addControl(VRText,<span class="str">'messageTXT'</span>,<span class="str">''</span>,8,192,224,64,1342177348)
+    addControl(VRButton,<span class="str">'sendPB'</span>,<span class="str">'send'</span>,64,264,80,25,1342177280)
+    addControl(VRButton,<span class="str">'closePB'</span>,<span class="str">'close'</span>,152,264,80,25,1342177280)
+    @historyRE.readonly=<span class="kw">true</span>
+    factory=SWin::LWFactory.new(SWin::Application.hInstance)
+    @messageTXT.setFont(factory.newfont(<span class="str">'‚l‚r –¾’©'</span>,11))
+    <span class="kw">self</span>.sizebox=<span class="kw">false</span>
+    <span class="kw">self</span>.maximizebox=<span class="kw">false</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

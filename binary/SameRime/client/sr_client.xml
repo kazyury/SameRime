@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<configuration>
+  <!--    Interval設定
+    SameRimeサーバーより他のユーザーの設定を受取り、画面をRefreshする間隔を秒数で指定します。
+    デフォルト設定では、60秒間隔でサーバーより他のユーザーの情報を受信します。
+  -->
+  <Interval          type="i">60</Interval>
+
+  <!--    MyName設定
+    SameRimeサーバーに登録する自らの名前です。
+    自ら及び他のユーザーの画面上にはこの名前が表示されます。
+    他のユーザーとこの名前が重複しても問題はありません。
+    ただし、他のユーザーはどちらに送信するべきか混乱するでしょう。
+  -->
+  <MyName            type="s">Your Name</MyName>
+
+  <!--    ListeningPort設定
+    SameRimeクライアントが他のユーザーからのメッセージを待ち受けるPort番号を設定します。
+    デフォルト設定では10000になっています。
+    デフォルト設定で問題がある場合には適宜修正してください。
+    SameRimeClient v1.1ではListeningPortの自動設定を可能とする予定です。
+    ただし、期待はしないで下さい。
+  -->
+  <ListeningPort     type="i">10000</ListeningPort>
+
+  <!-- 
+    --  これより以下の設定は、特に指示の無い限り修正しないで下さい。
+  -->
+  <!--    SameRimeServer設定
+    SameRimeサーバーのIPアドレスを設定します。
+    この設定は特に指示が無い限り変更しないで下さい。
+    デフォルト設定では152.56.144.45になっています。
+  -->
+  <SameRimeServer    type="s">152.56.144.45</SameRimeServer>
+
+  <!--    StatusManagerPort設定
+    SameRimeサーバーのStatusManagerが待ち受けるPort番号を設定します。
+    この設定は特に指示が無い限り変更しないで下さい。
+    デフォルト設定では41265になっています。
+  -->
+  <StatusManagerPort type="i">41265</StatusManagerPort>
+
+  <!--    ForwarderPort設定
+    SameRimeサーバーのForwarderが待ち受けるPort番号を設定します。
+    この設定は特に指示が無い限り変更しないで下さい。
+    デフォルト設定では41264になっています。
+  -->
+  <ForwarderPort type="i">41264</ForwarderPort>
+</configuration>

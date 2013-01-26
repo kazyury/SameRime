@@ -1,0 +1,18 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>new (SameRime::SameRimeServer::Forwarder)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File server/forwarder.rb, line 22</span>
+  <span class="kw">def</span> initialize(controller)
+    @controller=controller
+    @server=TCPServer.open(@controller.config[:ForwardingPort])
+    @status={}
+    @logger=Log4r::Logger[<span class="str">'default_logger'</span>]
+  <span class="kw">end</span></pre>
+</body>
+</html>

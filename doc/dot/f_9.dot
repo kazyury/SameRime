@@ -1,0 +1,216 @@
+digraph TopLevel {
+    compound = true
+    bgcolor = lightcyan1
+    fontname = Arial
+    fontsize = 8
+    label = "client/reporter.rb"
+    node [
+        fontname = Arial,
+        fontsize = 8,
+        color = black
+    ]
+
+    Singleton [
+        URL = "classes/Singleton.html",
+        shape = box,
+        label = "Singleton"
+    ]
+
+    Singleton -> SameRime__SameRimeClient__Sessions [
+
+    ]
+
+    VRClosingSensitive [
+        URL = "classes/VRClosingSensitive.html",
+        shape = box,
+        label = "VRClosingSensitive"
+    ]
+
+    VRClosingSensitive -> SameRime__SameRimeClient__MainForm [
+
+    ]
+
+    VRForm [
+        URL = "classes/VRForm.html",
+        label = "VRForm"
+    ]
+
+    VRForm -> SameRime__SameRimeClient__MainForm [
+
+    ]
+
+    VRClosingSensitive -> SameRime__SameRimeClient__SessionForm [
+
+    ]
+
+    VRForm -> SameRime__SameRimeClient__SessionForm [
+
+    ]
+
+    subgraph cluster_SameRime {
+        fillcolor = palegreen1
+        URL = "classes/SameRime.html"
+        fontname = Arial
+        color = blue
+        label = "SameRime"
+        style = filled
+        SameRime [
+            shape = plaintext,
+            height = 0.01,
+            width = 0.01,
+            label = ""
+        ]
+
+        SameRime__Message [
+            fontcolor = black,
+            URL = "classes/SameRime/Message.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "Message"
+        ]
+
+        SameRime__Report [
+            fontcolor = black,
+            URL = "classes/SameRime/Report.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "Report"
+        ]
+
+        subgraph cluster_SameRime__SameRimeClient {
+            fillcolor = palegreen3
+            URL = "classes/SameRime/SameRimeClient.html"
+            fontname = Arial
+            color = blue
+            label = "SameRimeClient"
+            style = filled
+            SameRime__SameRimeClient [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            SameRime__SameRimeClient__Messenger [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/Messenger.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Messenger"
+            ]
+
+            SameRime__SameRimeClient__Listener [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/Listener.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Listener"
+            ]
+
+            SameRime__SameRimeClient__Reporter [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/Reporter.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Reporter"
+            ]
+
+            SameRime__SameRimeClient__Controller [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/Controller.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Controller"
+            ]
+
+            SameRime__SameRimeClient__Sessions [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/Sessions.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Sessions"
+            ]
+
+            SameRime__SameRimeClient__MainForm [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/MainForm.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "MainForm"
+            ]
+
+            SameRime__SameRimeClient__SessionForm [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/SessionForm.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "SessionForm"
+            ]
+
+            SameRime__SameRimeClient__UI [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeClient/UI.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "UI"
+            ]
+
+        }
+
+        subgraph cluster_SameRime__SameRimeServer {
+            fillcolor = palegreen3
+            URL = "classes/SameRime/SameRimeServer.html"
+            fontname = Arial
+            color = blue
+            label = "SameRimeServer"
+            style = filled
+            SameRime__SameRimeServer [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            SameRime__SameRimeServer__Forwarder [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeServer/Forwarder.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Forwarder"
+            ]
+
+            SameRime__SameRimeServer__StatusManager [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeServer/StatusManager.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "StatusManager"
+            ]
+
+            SameRime__SameRimeServer__Controller [
+                fontcolor = black,
+                URL = "classes/SameRime/SameRimeServer/Controller.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Controller"
+            ]
+
+        }
+
+    }
+
+}
+

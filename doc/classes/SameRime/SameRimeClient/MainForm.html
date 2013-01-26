@@ -1,0 +1,242 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: SameRime::SameRimeClient::MainForm</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=jp" />
+  <link rel=StyleSheet href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> SameRime::SameRimeClient::MainForm
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../../files/client/gui_rb.html" class="aqua">
+client/gui.rb
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+VRForm
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+<table summary="Diagram of classes and modules" width="100%">
+<tr><td align="center">
+<map name="map">
+  <area shape="RECT" coords="1077,81,1149,33"      href="../../Singleton.html" alt="Singleton">
+  <area shape="RECT" coords="1095,196,1167,148"      href="Sessions.html" alt="Sessions">
+  <area shape="RECT" coords="1173,81,1280,33"      href="../../VRClosingSensitive.html" alt="VRClosingSensitive">
+  <area shape="RECT" coords="1191,196,1263,148"      href="MainForm.html" alt="MainForm">
+  <area shape="RECT" coords="1287,196,1367,148"      href="SessionForm.html" alt="SessionForm">
+  <area shape="RECT" coords="1304,81,1376,33"      href="../../VRForm.html" alt="VRForm">
+  <area shape="RECT" coords="124,196,196,148"      href="../Message.html" alt="Message">
+  <area shape="RECT" coords="28,196,100,148"      href="../Report.html" alt="Report">
+  <area shape="RECT" coords="972,196,1044,148"      href="Messenger.html" alt="Messenger">
+  <area shape="RECT" coords="876,196,948,148"      href="Listener.html" alt="Listener">
+  <area shape="RECT" coords="780,196,852,148"      href="Reporter.html" alt="Reporter">
+  <area shape="RECT" coords="684,196,756,148"      href="Controller.html" alt="Controller">
+  <area shape="RECT" coords="588,196,660,148"      href="UI.html" alt="UI">
+  <area shape="RECT" coords="457,196,529,148"      href="../SameRimeServer/Forwarder.html" alt="Forwarder">
+  <area shape="RECT" coords="343,196,433,148"      href="../SameRimeServer/StatusManager.html" alt="StatusManager">
+  <area shape="RECT" coords="247,196,319,148"      href="../SameRimeServer/Controller.html" alt="Controller">
+  <area shape="RECT" coords="577,207,1377,120"      href="../SameRimeClient.html" alt="SameRimeClient">
+  <area shape="RECT" coords="236,207,567,120"      href="../SameRimeServer.html" alt="SameRimeServer">
+  <area shape="RECT" coords="17,217,1388,92"      href="../../SameRime.html" alt="SameRime">
+</map>
+<img src="../../../dot/m_13_0.png" usemap="#map" border=0 alt="Module: SameRime">
+</td></tr></table>
+
+
+<div class="description"><p>
+<a href="../../SameRime.html">SameRime</a>のメイン画面
+</p>
+</div>
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000024">construct</a>&nbsp; &nbsp;
+<a href="#M000029">create_child</a>&nbsp; &nbsp;
+<a href="#M000026">exitPB_clicked</a>&nbsp; &nbsp;
+<a href="#M000028">message_received</a>&nbsp; &nbsp;
+<a href="#M000030">raise_alert</a>&nbsp; &nbsp;
+<a href="#M000032">remove_child</a>&nbsp; &nbsp;
+<a href="#M000031">self_close</a>&nbsp; &nbsp;
+<a href="#M000025">talkPB_clicked</a>&nbsp; &nbsp;
+<a href="#M000027">update_gui</a>&nbsp; &nbsp;
+</div>
+
+
+<table summary="Attributes" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Attributes</td></tr>
+</table>
+<table summary="Attribute details" cellspacing="5">
+     <tr valign="top">
+       <td class="attr-name">controller</td>
+       <td align="center" class="attr-rw">&nbsp;[RW]&nbsp;</td>
+       <td></td>
+     </tr>
+</table>
+
+
+<table summary="Included modules" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Included modules</td></tr>
+</table>
+<div class="name-list">
+    <span class="method-name">VRClosingSensitive</span>
+</div>
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000024"></a>
+<a href="MainForm.src/M000024.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000024.html');return false;">
+<b>construct</b>()
+</a>
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000025"></a>
+<a href="MainForm.src/M000025.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000025.html');return false;">
+<b>talkPB_clicked</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+talk toボタンを押したときの動作。 (1) リストから通信相手のIPアドレスを得る
+(2) controllerにIPアドレスに合致するFormが存在するか否かを問い合わせる。
+(3) もしいれば、IPアドレスと関係付けられた子画面を最前面に表示する。 (4)
+もしいなければ、SessionForm（子画面）を作成する。 (5)
+作成した子画面のIDを取得する。 (6)
+controllerに子画面のIDとIPアドレスを通知する。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000026"></a>
+<a href="MainForm.src/M000026.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000026.html');return false;">
+<b>exitPB_clicked</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a
+href="SessionForm.html">SessionForm</a>の全画面を閉じ、Controller#stopを呼び、自らの画面を閉じる。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000027"></a>
+<a href="MainForm.src/M000027.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000027.html');return false;">
+<b>update_gui</b>(list)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+reporterが受信したサーバ上のユーザ情報を受取り、 <a
+href="MainForm.html">MainForm</a>画面を更新する。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000028"></a>
+<a href="MainForm.src/M000028.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000028.html');return false;">
+<b>message_received</b>(msg)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a
+href="Listener.html">Listener</a>が受信したメッセージを受取り、適切な子画面に渡す。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000029"></a>
+<a href="MainForm.src/M000029.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000029.html');return false;">
+<b>create_child</b>(target_name,target_address)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="SessionForm.html">SessionForm</a>オブジェクトを新たに生成する。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000030"></a>
+<a href="MainForm.src/M000030.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000030.html');return false;">
+<b>raise_alert</b>(e)
+</a>
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000031"></a>
+<a href="MainForm.src/M000031.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000031.html');return false;">
+<b>self_close</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+windowの×ボタンで閉じたとき。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000032"></a>
+<a href="MainForm.src/M000032.html" target="Code" class="methodtitle"
+ onClick="popCode('MainForm.src/M000032.html');return false;">
+<b>remove_child</b>(child)
+</a>
+</td></tr>
+</table>
+
+</body>
+</html>

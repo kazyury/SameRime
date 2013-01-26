@@ -1,0 +1,163 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: SameRime::Message</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=jp" />
+  <link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> SameRime::Message
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../files/message_rb.html" class="aqua">
+message.rb
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+<table summary="Diagram of classes and modules" width="100%">
+<tr><td align="center">
+<map name="map">
+  <area shape="RECT" coords="1077,81,1149,33"      href="../Singleton.html" alt="Singleton">
+  <area shape="RECT" coords="1095,196,1167,148"      href="SameRimeClient/Sessions.html" alt="Sessions">
+  <area shape="RECT" coords="1173,81,1280,33"      href="../VRClosingSensitive.html" alt="VRClosingSensitive">
+  <area shape="RECT" coords="1191,196,1263,148"      href="SameRimeClient/MainForm.html" alt="MainForm">
+  <area shape="RECT" coords="1287,196,1367,148"      href="SameRimeClient/SessionForm.html" alt="SessionForm">
+  <area shape="RECT" coords="1304,81,1376,33"      href="../VRForm.html" alt="VRForm">
+  <area shape="RECT" coords="124,196,196,148"      href="Message.html" alt="Message">
+  <area shape="RECT" coords="28,196,100,148"      href="Report.html" alt="Report">
+  <area shape="RECT" coords="972,196,1044,148"      href="SameRimeClient/Messenger.html" alt="Messenger">
+  <area shape="RECT" coords="876,196,948,148"      href="SameRimeClient/Listener.html" alt="Listener">
+  <area shape="RECT" coords="780,196,852,148"      href="SameRimeClient/Reporter.html" alt="Reporter">
+  <area shape="RECT" coords="684,196,756,148"      href="SameRimeClient/Controller.html" alt="Controller">
+  <area shape="RECT" coords="588,196,660,148"      href="SameRimeClient/UI.html" alt="UI">
+  <area shape="RECT" coords="457,196,529,148"      href="SameRimeServer/Forwarder.html" alt="Forwarder">
+  <area shape="RECT" coords="343,196,433,148"      href="SameRimeServer/StatusManager.html" alt="StatusManager">
+  <area shape="RECT" coords="247,196,319,148"      href="SameRimeServer/Controller.html" alt="Controller">
+  <area shape="RECT" coords="577,207,1377,120"      href="SameRimeClient.html" alt="SameRimeClient">
+  <area shape="RECT" coords="236,207,567,120"      href="SameRimeServer.html" alt="SameRimeServer">
+  <area shape="RECT" coords="17,217,1388,92"      href="../SameRime.html" alt="SameRime">
+</map>
+<img src="../../dot/m_13_0.png" usemap="#map" border=0 alt="Module: SameRime">
+</td></tr></table>
+
+
+<div class="description"><p>
+<a href="SameRimeClient/Messenger.html">SameRimeClient::Messenger</a>→<a
+href="SameRimeServer/Forwarder.html">SameRimeServer::Forwarder</a>→<a
+href="SameRimeClient/Listener.html">SameRimeClient::Listener</a>
+と流れるメッセージのフォーマットを規定する。
+</p>
+<ul>
+<li>1byte～15byte：メッセージ送信元クライアントIPアドレス
+
+</li>
+<li>16byte～30byte：メッセージ送信先クライアントIPアドレス
+
+</li>
+<li>31byte～50byte：メッセージ送信元の名前
+
+</li>
+<li>51byte～ ：メッセージ文字列。
+
+</li>
+</ul>
+</div>
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000055">new</a>&nbsp; &nbsp;
+<a href="#M000056">to_s</a>&nbsp; &nbsp;
+</div>
+
+
+<table summary="Attributes" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Attributes</td></tr>
+</table>
+<table summary="Attribute details" cellspacing="5">
+     <tr valign="top">
+       <td class="attr-name">message</td>
+       <td align="center" class="attr-rw">&nbsp;[RW]&nbsp;</td>
+       <td></td>
+     </tr>
+     <tr valign="top">
+       <td class="attr-name">receiver</td>
+       <td align="center" class="attr-rw">&nbsp;[RW]&nbsp;</td>
+       <td></td>
+     </tr>
+     <tr valign="top">
+       <td class="attr-name">sender</td>
+       <td align="center" class="attr-rw">&nbsp;[RW]&nbsp;</td>
+       <td></td>
+     </tr>
+     <tr valign="top">
+       <td class="attr-name">sender_name</td>
+       <td align="center" class="attr-rw">&nbsp;[RW]&nbsp;</td>
+       <td></td>
+     </tr>
+</table>
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000055"></a>
+<a href="Message.src/M000055.html" target="Code" class="methodtitle"
+ onClick="popCode('Message.src/M000055.html');return false;">
+<b>new</b>(str=nil)
+</a>
+</td></tr>
+</table>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000056"></a>
+<a href="Message.src/M000056.html" target="Code" class="methodtitle"
+ onClick="popCode('Message.src/M000056.html');return false;">
+<b>to_s</b>()
+</a>
+</td></tr>
+</table>
+
+</body>
+</html>

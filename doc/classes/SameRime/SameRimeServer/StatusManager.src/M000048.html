@@ -1,0 +1,17 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>forwardable? (SameRime::SameRimeServer::StatusManager)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File server/statusmanager.rb, line 75</span>
+  <span class="kw">def</span> forwardable?(ipstr)
+    @logger.debug {&quot;SameRimeServer::StatusManager#forwardable? called with #{ipstr}&quot;}
+    <span class="kw">return</span> <span class="kw">false</span> <span class="kw">unless</span> @status[ipstr][0]==<span class="str">&quot;0&quot;</span>
+    @status[ipstr][2]
+  <span class="kw">end</span></pre>
+</body>
+</html>

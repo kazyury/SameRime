@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<configuration>
+  <LogLevel type="s">INFO</LogLevel>
+  <ForwardingPort type="i">41264</ForwardingPort>
+  <StatusManagerPort type="i">41265</StatusManagerPort>
+  <Interval type="i">60</Interval>
+</configuration>

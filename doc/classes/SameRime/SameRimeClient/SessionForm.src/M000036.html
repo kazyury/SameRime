@@ -1,0 +1,23 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>add_message (SameRime::SameRimeClient::SessionForm)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 212</span>
+  <span class="kw">def</span> add_message(msg)
+    attr = @historyRE.selformat
+    attr.color=0xff
+    attr.fontface=<span class="str">&quot;‚l‚r –¾’©&quot;</span>
+    attr.height=160
+    attr.pitch_family=11
+    addtextwithattr(&quot;#{msg.sender_name}:#{msg.message}\n&quot;,attr)
+    loop <span class="kw">do</span>
+      <span class="kw">break</span> <span class="kw">if</span> @historyRE.scrolldownPage==65536
+    <span class="kw">end</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

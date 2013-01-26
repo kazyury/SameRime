@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>run (SameRime::SameRimeServer::Forwarder)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File server/forwarder.rb, line 37</span>
+  <span class="kw">def</span> run
+    @logger.info {<span class="str">&quot;SameRimeServer::Forwarder running...&quot;</span>}
+    <span class="kw">while</span> messenger=@server.accept
+      msg=SameRime::Message.new(messenger.gets)
+      @logger.debug {&quot;SameRimeServer::Forwarder accepted message #{msg}&quot;}
+      to_addr=msg.receiver
+      <span class="kw">if</span> port=@controller.forwardable?(to_addr)
+        @logger.debug {&quot;SameRimeServer::Forwarder forwards to #{to_addr} : #{port}&quot;}
+        <span class="kw">begin</span>
+          listener=TCPSocket.open(to_addr,port)
+          listener.puts msg.to_s
+          listener.close
+        <span class="kw">rescue</span> Exception=&gt;e
+          @logger.error {&quot;SameRimeServer::Forwarder forwarding failed :#{e.backtrace}&quot;}
+          @controller.remove_client(to_addr)
+          messenger.puts <span class="str">&quot;1&quot;</span>
+          messenger.close
+        <span class="kw">else</span>
+          messenger.puts <span class="str">&quot;0&quot;</span>
+          messenger.close
+        <span class="kw">end</span>
+      <span class="kw">else</span>
+        @logger.error {&quot;SameRimeServer::Forwarder forwardable? was #{port}.&quot;}
+        @logger.error {&quot;SameRimeServer::Forwarder sender's message was #{msg}&quot;}
+        messenger.puts <span class="str">&quot;1&quot;</span>
+        messenger.close
+      <span class="kw">end</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

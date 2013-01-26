@@ -1,0 +1,17 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>closePB_clicked (SameRime::SameRimeClient::SessionForm)</title>
+<link rel=StyleSheet href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File client/gui.rb, line 206</span>
+  <span class="kw">def</span> closePB_clicked
+    @parent_form.remove_child(<span class="kw">self</span>)
+    @controller.remove_session(<span class="kw">self</span>.id)
+    <span class="kw">self</span>.close
+  <span class="kw">end</span></pre>
+</body>
+</html>

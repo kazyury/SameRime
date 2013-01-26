@@ -1,0 +1,193 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: server.rb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=jp" />
+  <link rel=StyleSheet href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+<table summary="Information on file" width="100%">
+ <tr class="title-row">
+ <td><table summary="layout" width="100%"><tr>
+   <td class="big-title-font" colspan="2">server.rb</td>
+   <td align="right"><table summary="layout" cellspacing="0" cellpadding="2">
+         <tr>
+           <td  class="small-title-font">Path:</td>
+           <td class="small-title-font">server.rb</td>
+         </tr>
+         <tr>
+           <td class="small-title-font">Modified:</td>
+           <td class="small-title-font">Sun Sep 21 13:53:56 東京 (標準時) 2003</td>
+         </tr>
+        </table>
+    </td></tr></table></td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+<table summary="Diagram of classes and modules" width="100%">
+<tr><td align="center">
+<map name="map">
+</map>
+<img src="../dot/f_1.png" usemap="#map" border=0 alt="TopLevel">
+</td></tr></table>
+
+
+<div class="description"><h1>ReadMe</h1>
+<p>
+SameTime風の適当チャットアプリです。
+</p>
+<h1>What&#8217;s New</h1>
+<p>
+2003-09-21 <a href="../classes/SameRime.html">SameRime</a> v1.0 Initial
+Release!
+</p>
+<ul>
+<li>Server側の構成ファイル読み込みに対応
+
+</li>
+<li>API-Referenceを適当に作成
+
+</li>
+<li>UserManualは対応せず。だってユーザがいないんだもん。
+
+</li>
+</ul>
+<p>
+2003-09-19
+</p>
+<ul>
+<li>SessionFormが自動で最上段までスクロールしてしまっていたのを最下段となるように修正（こっそり）
+
+</li>
+</ul>
+<h1>Thanx</h1>
+<p>
+このアプリはオブジェクト指向スクリプト言語Rubyを用いて記述されてます。
+Rubyに関しては<a
+href="http://www.ruby-lang.org/を参照してください。">www.ruby-lang.org/を参照してください。</a>
+また、Rubyに関する様々なライブラリを使用しています。（抜けてたらごめんなさい）
+</p>
+<ul>
+<li>Exerb
+
+</li>
+<li>VisualuRuby
+
+</li>
+<li>REXML
+
+</li>
+<li>Log4r
+
+</li>
+</ul>
+<p>
+等。感謝。
+</p>
+<h1>Version 1.0</h1>
+<p>
+initialリリース
+</p>
+<h1>Todo for future release(1.x) 要望があれば対応するかも</h1>
+<ul>
+<li>最小化した時にトレーに突っ込む。（必要？）
+
+</li>
+<li>画面リサイズに対応
+
+</li>
+<li>フォントの切り替えに対応。
+
+</li>
+<li>statusの切り替え機能の実装（ACTIVE,SUSPEND,STOPPED）
+
+</li>
+<li>GUI：メニュー追加
+
+</li>
+<li>クライアントXMLのEditor
+
+</li>
+<li>添付ファイル送信機能？
+
+</li>
+</ul>
+<h1>Known Issue</h1>
+<h1>Fixed Bug</h1>
+<p>
+2003-09-19
+</p>
+<ul>
+<li>SessionFormが最上段までスクロールしてしまう。
+&#8212;&gt;自動スクロールするための定数を6536→65536に修正
+
+</li>
+</ul>
+<p>
+2003-08-29
+</p>
+<ul>
+<li>最初に受信したメッセージが、受信側で表示されない。
+
+</li>
+<li>突然SessionFormが落ちて、その後にメッセージを受信するとSystemExitが発生する。
+&#8212;&gt;SessionFormがGCされてしまい、Windowが消えていた様子。
+とりあえず、GC対象とならないようMainFormにSessionFormへの参照を残す形で対応。
+あと、GCされていたとしても例外Handlingで対応できるようにしたつもり。
+
+</li>
+<li>RangeError（↑と同様かも）。やはり、突然SessionFormが落ちて、TalkToしようとすると発生。
+～ is recycled object 又はNameError でundefined method &#8216;top&#8217;
+for #&lt;Arra:～&gt;
+&#8212;&gt;SessionFormがGCされてしまい、Windowが消えていた様子。
+とりあえず、GC対象とならないようMainFormにSessionFormへの参照を残す形で対応。
+あと、GCされていたとしても例外Handlingで対応できるようにしたつもり。
+
+</li>
+</ul>
+<p>
+2003-08-xx
+</p>
+<ul>
+<li>Client側が頓死した場合、サーバー上のSTATUSは&quot;0&quot;で残っていて（実際には死んでいる。）、その相手にメッセージ
+を送信しようとすると、サーバー側で頓死。forwarder.rb:43 Errno:ECONNREFUSED
+&#8212;&gt;結局、サーバー側でCleaner処理を定期的に入れることで対応済み。
+
+</li>
+</ul>
+</div>
+
+<table summary="Requires" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Required files</td></tr>
+</table>
+<div class="name-list">
+socket&nbsp; &nbsp;
+rexml/document.rb&nbsp; &nbsp;
+log4r&nbsp; &nbsp;
+./message.rb&nbsp; &nbsp;
+<a href="server/statusmanager_rb.html">server/statusmanager.rb</a>&nbsp; &nbsp;
+<a href="server/forwarder_rb.html">server/forwarder.rb</a>&nbsp; &nbsp;
+<a href="server/controller_rb.html">server/controller.rb</a>&nbsp; &nbsp;
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

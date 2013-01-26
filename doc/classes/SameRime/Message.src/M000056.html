@@ -1,0 +1,21 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=jp">
+<title>to_s (SameRime::Message)</title>
+<link rel=StyleSheet href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File message.rb, line 63</span>
+  <span class="kw">def</span> to_s
+    <span class="kw">if</span> check
+      @sender   =@sender[0,14]
+      @receiver =@receiver[0,14]
+      sprintf(<span class="str">&quot;%15s%15s%20s%s&quot;</span>,@sender,@receiver,@sender_name,@message)
+    <span class="kw">else</span>
+      <span class="kw">nil</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

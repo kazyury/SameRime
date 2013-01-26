@@ -1,0 +1,12 @@
+=Version 1.0
+initialリリース
+
+=Todo for future release(1.x) 要望があれば対応するかも
+* 最小化した時にトレーに突っ込む。（必要？）
+* 画面リサイズに対応
+* フォントの切り替えに対応。
+* statusの切り替え機能の実装（ACTIVE,SUSPEND,STOPPED）
+* GUI：メニュー追加
+* クライアントXMLのEditor
+* 添付ファイル送信機能？
+

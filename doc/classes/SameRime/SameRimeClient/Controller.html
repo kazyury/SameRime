@@ -1,0 +1,252 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: SameRime::SameRimeClient::Controller</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=jp" />
+  <link rel=StyleSheet href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> SameRime::SameRimeClient::Controller
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../../files/client/controller_rb.html" class="aqua">
+client/controller.rb
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+<table summary="Diagram of classes and modules" width="100%">
+<tr><td align="center">
+<map name="map">
+  <area shape="RECT" coords="1077,81,1149,33"      href="../../Singleton.html" alt="Singleton">
+  <area shape="RECT" coords="1095,196,1167,148"      href="Sessions.html" alt="Sessions">
+  <area shape="RECT" coords="1173,81,1280,33"      href="../../VRClosingSensitive.html" alt="VRClosingSensitive">
+  <area shape="RECT" coords="1191,196,1263,148"      href="MainForm.html" alt="MainForm">
+  <area shape="RECT" coords="1287,196,1367,148"      href="SessionForm.html" alt="SessionForm">
+  <area shape="RECT" coords="1304,81,1376,33"      href="../../VRForm.html" alt="VRForm">
+  <area shape="RECT" coords="124,196,196,148"      href="../Message.html" alt="Message">
+  <area shape="RECT" coords="28,196,100,148"      href="../Report.html" alt="Report">
+  <area shape="RECT" coords="972,196,1044,148"      href="Messenger.html" alt="Messenger">
+  <area shape="RECT" coords="876,196,948,148"      href="Listener.html" alt="Listener">
+  <area shape="RECT" coords="780,196,852,148"      href="Reporter.html" alt="Reporter">
+  <area shape="RECT" coords="684,196,756,148"      href="Controller.html" alt="Controller">
+  <area shape="RECT" coords="588,196,660,148"      href="UI.html" alt="UI">
+  <area shape="RECT" coords="457,196,529,148"      href="../SameRimeServer/Forwarder.html" alt="Forwarder">
+  <area shape="RECT" coords="343,196,433,148"      href="../SameRimeServer/StatusManager.html" alt="StatusManager">
+  <area shape="RECT" coords="247,196,319,148"      href="../SameRimeServer/Controller.html" alt="Controller">
+  <area shape="RECT" coords="577,207,1377,120"      href="../SameRimeClient.html" alt="SameRimeClient">
+  <area shape="RECT" coords="236,207,567,120"      href="../SameRimeServer.html" alt="SameRimeServer">
+  <area shape="RECT" coords="17,217,1388,92"      href="../../SameRime.html" alt="SameRime">
+</map>
+<img src="../../../dot/m_13_0.png" usemap="#map" border=0 alt="Module: SameRime">
+</td></tr></table>
+
+
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000015">add_session</a>&nbsp; &nbsp;
+<a href="#M000019">error_on_openport</a>&nbsp; &nbsp;
+<a href="#M000014">find_form</a>&nbsp; &nbsp;
+<a href="#M000018">message_received</a>&nbsp; &nbsp;
+<a href="#M000017">messaging</a>&nbsp; &nbsp;
+<a href="#M000010">new</a>&nbsp; &nbsp;
+<a href="#M000016">remove_session</a>&nbsp; &nbsp;
+<a href="#M000011">run</a>&nbsp; &nbsp;
+<a href="#M000012">stop</a>&nbsp; &nbsp;
+<a href="#M000013">update_gui</a>&nbsp; &nbsp;
+</div>
+
+
+<table summary="Attributes" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Attributes</td></tr>
+</table>
+<table summary="Attribute details" cellspacing="5">
+     <tr valign="top">
+       <td class="attr-name">config</td>
+       <td align="center" class="attr-rw">&nbsp;[R]&nbsp;</td>
+       <td></td>
+     </tr>
+</table>
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000010"></a>
+<a href="Controller.src/M000010.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000010.html');return false;">
+<b>new</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+定義情報の読み込みと、実行する各機能の初期化、及び各機能Threadのコンテナを設定。
+各機能は<a
+href="Controller.html">Controller</a>を介して相互のやり取りを行うため、各機能のコンストラクタにselfを渡す。
+</p>
+</div>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000011"></a>
+<a href="Controller.src/M000011.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000011.html');return false;">
+<b>run</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+各機能を動かす。 <a href="Reporter.html">Reporter</a>,<a
+href="Listener.html">Listener</a>はThreadとして実行し、UIはmessageloopに入る。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000012"></a>
+<a href="Controller.src/M000012.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000012.html');return false;">
+<b>stop</b>()
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+各機能のstopメソッドを呼んだのち、各Threadをkillする。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000013"></a>
+<a href="Controller.src/M000013.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000013.html');return false;">
+<b>update_gui</b>(list)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="Reporter.html">Reporter</a>からの情報を<a
+href="UI.html">UI</a>に転送する。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000014"></a>
+<a href="Controller.src/M000014.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000014.html');return false;">
+<b>find_form</b>(address)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+指定されたIPアドレスに関係付けられた画面が存在する場合にはその画面IDを、
+存在しない場合にはnilを返す。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000015"></a>
+<a href="Controller.src/M000015.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000015.html');return false;">
+<b>add_session</b>(ipaddress,ui_id)
+</a>
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000016"></a>
+<a href="Controller.src/M000016.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000016.html');return false;">
+<b>remove_session</b>(arg)
+</a>
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000017"></a>
+<a href="Controller.src/M000017.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000017.html');return false;">
+<b>messaging</b>(msgobj)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Messageオブジェクトを受取り、Messengerに転送する。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000018"></a>
+<a href="Controller.src/M000018.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000018.html');return false;">
+<b>message_received</b>(msg)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="Listener.html">Listener</a>よりメッセージを受取り、UIに渡す。
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000019"></a>
+<a href="Controller.src/M000019.html" target="Code" class="methodtitle"
+ onClick="popCode('Controller.src/M000019.html');return false;">
+<b>error_on_openport</b>(e)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+ポートをオープンできなかった場合のハンドラ
+</p>
+</div>
+
+</body>
+</html>
